@@ -41,7 +41,7 @@ const LoginStatusMessage = ({ isLoggedIn, dispatch }) => {
 
       <Button
         onPress={() =>
-          navigation.dispatch(NavigationActions.navigate({ routeName: 'StackNavigatorScreen', params: {
+          dispatch(NavigationActions.navigate({ routeName: 'StackNavigatorScreen', params: {
             user: 'Lucy',
             mode: 'info',
           } }))}

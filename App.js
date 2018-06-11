@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 
 import AppReducer from './src/reducers';
-import AppWithNavigationState from './src/navigators/AppNavigator';
+import AppWithNavigationState from './src/navigators/AppNavigator02';
 import { middleware } from './src/utils/redux';
 
 const store = createStore(
