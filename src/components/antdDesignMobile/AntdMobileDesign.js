@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import GlobalStyles from '../../styles/GlobalStyles';
-// import { Button } from 'antd-mobile';
+import { Button } from 'antd-mobile';
 
 const styles = StyleSheet.create({
   container: {

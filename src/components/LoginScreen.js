@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { NavigationActions } from 'react-navigation';
+import { YellowBox } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -17,21 +18,45 @@ const styles = StyleSheet.create({
   },
 });
 
-const LoginScreen = ({ navigation }) => (
-  <View style={styles.container}>
-    <Text style={styles.welcome}>
-      登入页面
-    </Text>
-    <Text style={styles.instructions}>
-      This is great
-    </Text>
-    <Button
-      onPress={() => navigation.dispatch({ type: 'Login' })}
-      title="登录"
-    />
+// const LoginScreen = ({ navigation }) => (
+//   <View style={styles.container}>
+//     <Text style={styles.welcome}>
+//       登入页面
+//     </Text>
+//     <Text style={styles.instructions}>
+//       This is great
+//     </Text>
+//     <Button
+//       onPress={() => navigation.dispatch({ type: 'Login' })}
+//       title="登录"
+//     />
     
-  </View>
-);
+//   </View>
+// );
+
+//ES6
+class LoginScreen extends React.Component {
+  componentDidMount(){
+    YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+  }
+  render() {
+      return (
+        <View style={styles.container}>
+          <Text style={styles.welcome}>
+            登入页面
+          </Text>
+          <Text style={styles.instructions}>
+            This is great
+          </Text>
+          <Button
+            onPress={() => this.props.navigation.dispatch({ type: 'Login' })}
+            title="登录"
+          />
+          
+        </View>
+      );
+  }
+}
 
 LoginScreen.propTypes = {
   navigation: PropTypes.object.isRequired,

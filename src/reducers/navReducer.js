@@ -4,7 +4,7 @@ import { MENU } from '../common/Menu';
 import * as types from '../actions/ActionTypes';
 
 // Start with two routes: The Main screen, with the Login screen on top.
-const firstAction = AppNavigator.router.getActionForPathAndParams(MENU.MENU);
+const firstAction = AppNavigator.router.getActionForPathAndParams(MENU.MAIN);
 const tempNavState = AppNavigator.router.getStateForAction(firstAction);
 const secondAction = AppNavigator.router.getActionForPathAndParams(MENU.LOGIN);
 // const thirdAction = AppNavigator.router.getActionForPathAndParams('MyEditInfo');
