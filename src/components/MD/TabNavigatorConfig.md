@@ -1,6 +1,10 @@
 # TabNavigator参数详解
 
-## TabNavigator(RouteConfigs, TabNavigatorConfig)
+
+
+### API 定义
+
+**TabNavigator(RouteConfigs, TabNavigatorConfig)**
 
 ### RouteConfigs
 

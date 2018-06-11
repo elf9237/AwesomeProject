@@ -52,6 +52,7 @@ const GlobalStyles = {
         borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',
+        padding: 10,
     },
     btnText: {
         color: '#fff',

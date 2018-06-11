@@ -42,8 +42,10 @@ class AntdMobileDesign extends React.Component {
     <Text style={styles.welcome}>
       Antd-Design-Mobile Screen
     </Text>
-    <View style={{height: 40}}></View>
-   <TouchableOpacity onPress={() => this._ButtonPage()} style={GlobalStyles.btn}><Text style={GlobalStyles.btnText}>按钮</Text></TouchableOpacity>
+    <View style={{height: 40}}>
+      <TouchableOpacity onPress={() => this._ButtonPage()} style={GlobalStyles.btn}><Text style={GlobalStyles.btnText}>按钮</Text></TouchableOpacity>
+    </View>
+    
   </View>;
   }
 }

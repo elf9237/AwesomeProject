@@ -12,7 +12,11 @@ const styles = StyleSheet.create({
   },
   typeView: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
+    marginTop: 10,
+    marginBottom: 10
+  },
+  viewBtn: {
     margin: 10,
   }
 });
@@ -41,6 +45,7 @@ const LoginStatusMessage = ({ isLoggedIn, dispatch }) => {
           onPress={() =>
             dispatch(NavigationActions.navigate({ routeName: 'AntdMobileDesign' }))}
           title="AntdMobile"
+          style={styles.viewBtn}
         />
           {/* StackNavigator模块 */}
         <Button
@@ -50,6 +55,7 @@ const LoginStatusMessage = ({ isLoggedIn, dispatch }) => {
               mode: 'info',
             } }))}
           title="StackNavigator"
+          style={styles.viewBtn}
         />
       </View>
 
