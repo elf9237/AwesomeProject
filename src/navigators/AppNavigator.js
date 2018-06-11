@@ -12,10 +12,10 @@ import ProfileScreen from '../components/ProfileScreen';
 import AntdMobileDesign from '../components/antdDesignMobile/AntdMobileDesign';  
 import ButtonAntd from '../components/antdDesignMobile/ButtonAntd'; 
 
-// react-navigation示例
-import StackNavigatorExampleScreen from '../components/navigator/StackNavigatorExampleScreen'; 
-import EditInfoScreen from '../components/navigator/EditInfoScreen';
-import SecondScreen from '../components/navigator/SecondScreen';
+// StackNavigation示例
+import StackNavigatorExampleScreen from '../components/navigator/stackNavigator/StackNavigatorExampleScreen'; 
+import EditInfoScreen from '../components/navigator/stackNavigator/EditInfoScreen';
+import SecondScreen from '../components/navigator/stackNavigator/SecondScreen';
 
 
 export const AppNavigator = createStackNavigator({

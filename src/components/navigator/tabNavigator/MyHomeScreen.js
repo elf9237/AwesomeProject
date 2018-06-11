@@ -9,7 +9,7 @@ import {
 
 export default class MyHomeScreen extends React.Component {
     static navigationOptions = {
-      tabBarLabel: 'Home',
+      tabBarLabel: '首页',
       // Note: By default the icon is only shown on iOS. Search the showIcon option below.
       tabBarIcon: ({ tintColor }) => (
         <Image
@@ -23,7 +23,7 @@ export default class MyHomeScreen extends React.Component {
       return (
         <Button
           onPress={() => this.props.navigation.navigate('Login')}
-          title="Go to notifications"
+          title="Go to 热点"
         />
       );
     }

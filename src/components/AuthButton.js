@@ -6,7 +6,7 @@ import { NavigationActions } from 'react-navigation';
 
 const AuthButton = ({ logout, loginScreen, isLoggedIn }) => (
   <Button
-    title={isLoggedIn ? 'Log Out' : 'Open Login Screen'}
+    title={isLoggedIn ? '退出' : '打开登录页'}
     onPress={isLoggedIn ? logout : loginScreen}
   />
 );

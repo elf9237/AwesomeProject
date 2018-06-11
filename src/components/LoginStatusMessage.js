@@ -11,7 +11,9 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   typeView: {
-    flexDirection: 'column',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    margin: 10,
   }
 });
 
@@ -22,31 +24,34 @@ const LoginStatusMessage = ({ isLoggedIn, dispatch }) => {
   return (
     <View>
       <Text style={styles.welcome}>
-        {'You are "logged in" right now'}
+        {'您已经登录'}
       </Text>
-      <View style={styles.typeView}>
 
-      </View>
       <Button
         onPress={() =>
           dispatch(NavigationActions.navigate({ routeName: 'Profile' }))}
         title="Profile"
       />
 
-      <Button
-        onPress={() =>
-          dispatch(NavigationActions.navigate({ routeName: 'AntdMobileDesign' }))}
-        title="AntdMobileDesign"
-      />
+      {/* 登陆后示例模块入口 */}
 
-      <Button
-        onPress={() =>
-          dispatch(NavigationActions.navigate({ routeName: 'StackNavigatorScreen', params: {
-            user: 'Lucy',
-            mode: 'info',
-          } }))}
-        title="StackNavigatorScreen"
-      />
+      <View style={styles.typeView}>
+          {/* antMobile模块 */}
+        <Button
+          onPress={() =>
+            dispatch(NavigationActions.navigate({ routeName: 'AntdMobileDesign' }))}
+          title="AntdMobile"
+        />
+          {/* StackNavigator模块 */}
+        <Button
+          onPress={() =>
+            dispatch(NavigationActions.navigate({ routeName: 'StackNavigatorScreen', params: {
+              user: 'Lucy',
+              mode: 'info',
+            } }))}
+          title="StackNavigator"
+        />
+      </View>
 
     </View>
   );

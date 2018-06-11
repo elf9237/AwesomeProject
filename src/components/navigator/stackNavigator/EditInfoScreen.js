@@ -9,7 +9,7 @@ import {
     ActivityIndicator,
     TextInput,
 } from 'react-native';
-import payload from '../../sources/json/payload.json';
+// import payload from '../../sources/json/payload.json';
 export default class EditInfoScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
         const { params = {} } = navigation.state;

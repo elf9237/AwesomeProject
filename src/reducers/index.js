@@ -1,4 +1,5 @@
-import nav from './navReducer';
+import nav from './navReducer';  //navigation
+//import nav from './navTabReducer';  //tabNavigation
 import auth from './authReducer';
 
 import { combineReducers } from 'redux';

@@ -9,7 +9,7 @@ import {
 
 export default class MyNotificationsScreen extends React.Component {
     static navigationOptions = {
-      tabBarLabel: 'Notifications',
+      tabBarLabel: '热点',
       tabBarIcon: ({ tintColor }) => (
         <Image
         source={require('../../../sources/images/me-selected.png')}
@@ -22,7 +22,7 @@ export default class MyNotificationsScreen extends React.Component {
       return (
         <Button
           onPress={() => this.props.navigation.goBack()}
-          title="Go back home"
+          title="回到首页"
         />
       );
     }

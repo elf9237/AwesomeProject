@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import {bindActionCreators} from 'redux';//将要绑定的actions和dispatch绑定到一起
 import { TabNavigator, createBottomTabNavigator, createMaterialTopTabNavigator } from 'react-navigation';
-import { addListener } from '../utils/redux';
-
 
 import MyHomeScreen from '../components/navigator/tabNavigator/MyHomeScreen';
 import MyNotificationsScreen from '../components/navigator/tabNavigator/MyNotificationsScreen';
 import MyEditInfoScreen from '../components/navigator/tabNavigator/MyEditInfoScreen';
 
 
-export const TabNavigator = createBottomTabNavigator({
+export const TabScreen = createBottomTabNavigator({
   MyHome: {
     screen: MyHomeScreen,
   },
@@ -22,7 +18,7 @@ export const TabNavigator = createBottomTabNavigator({
     screen: MyEditInfoScreen,
   },
 }, {
-  // initialRouteName: 'Main',
+  initialRouteName: 'MyHome',
   tabBarPosition: 'bottom',
   animationEnabled: true,
   swipeEnabled:true,
@@ -30,4 +26,5 @@ export const TabNavigator = createBottomTabNavigator({
     activeTintColor: '#e91e63',
   },
 });
+
 
