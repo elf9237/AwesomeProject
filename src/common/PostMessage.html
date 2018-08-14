@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+    <div style="width: 100px; height: 100px">
+            <button id="btn">点击我</button>
+            <p style="text-align: center">收到react native发送的数据: <span id="data"></span></p>
+        </div>
+    </body>
+    <script>
+        // @flow
+        // function sendData(data) {
+        //     // console.log('只能传递一个字符串类型的参数');
+        //     if(!!window.postMessage) {
+        //         window.postMessage(data);
+        //     } else {
+        //     throw Error('postMessage接口还未注入');
+        //     }
+        // }
+        // var data = 0;
+        // document.getElementById("btn").onclick = function() {
+        //     sendData();
+        // }
+        window.onload = function () {
+
+        // document.addEventListener('message', function (e) {
+        //     document.getElementById('data').textContent = e.data;
+        // });
+
+        // document.getElementById('btn').onclick = function () {
+        //     data += 100;
+        //     sendData(data);
+        // }
+
+        // web side
+        const me = {
+            name: 'Qi',
+            age: 26,
+            nickname: 'pinqy',
+        }
+        // 提供我的信息
+        function info(property) {
+            return me[property] || 'I don\'t know'
+        }
+
+        window.document.addEventListener('message', function (e) {
+            const message = JSON.parse(e.data)
+            if (message.command === 'get info') {
+                const property = info(message.payload.property)
+                console.log(property, 'H5获取数据');
+                // 向Native发消息通知结果
+                const data = {
+                    command: 'get info',
+                    payload: {
+                        [message.payload.property]: property
+                    }
+                }
+                window.postMessage(JSON.stringify(data))
+
+            }
+        })
+
+
+    }
+    </script>
+
+</html>
