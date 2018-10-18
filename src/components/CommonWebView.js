@@ -19,7 +19,7 @@ import { setWebViewStorage, getWebViewStorage } from 'ywl/src/components/WebView
 import { Urls } from 'ywl/src/constants/constants';
 
 const { width, height } = Dimensions.get('window');
-
+//https://blog.csdn.net/sunshinezx8023/article/details/80702443
 type Props = {
   _onBarCodeRead?: (e?: any) => void,
 };

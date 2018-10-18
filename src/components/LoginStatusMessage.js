@@ -33,8 +33,8 @@ const LoginStatusMessage = ({ isLoggedIn, dispatch }) => {
 
       <Button
         onPress={() =>
-          dispatch(NavigationActions.navigate({ routeName: 'Profile' }))}
-        title="Profile"
+          dispatch(NavigationActions.navigate({ routeName: 'WebView' }))}
+        title="WebView"
       />
 
       {/* 登陆后示例模块入口 */}

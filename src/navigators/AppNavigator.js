@@ -6,7 +6,7 @@ import { addListener } from '../utils/redux';
 
 import LoginScreen from '../components/LoginScreen';
 import MainScreen from '../components/MainScreen';
-import ProfileScreen from '../components/ProfileScreen';
+import WebViewDemo from '../components/WebViewDemo';
 
 //antd design mobile 模板
 import AntdMobileDesign from '../components/antdDesignMobile/AntdMobileDesign';  
@@ -21,7 +21,7 @@ import SecondScreen from '../components/navigator/stackNavigator/SecondScreen';
 export const AppNavigator = createStackNavigator({
   Login: { screen: LoginScreen },
   Main: { screen: MainScreen },
-  Profile: { screen: ProfileScreen },
+  WebView: { screen: WebViewDemo },
 
   //antd-designed-mobile
   AntdMobileDesign: { screen: AntdMobileDesign },

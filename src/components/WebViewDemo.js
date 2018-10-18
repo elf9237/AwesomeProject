@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     height: height,
   }
 });
-class ProfileScreen extends React.Component {
+class WebViewDemo extends React.Component {
   constructor(props){
     super(props);
     this.data = 0;
