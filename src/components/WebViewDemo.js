@@ -80,8 +80,8 @@ class WebViewDemo extends React.Component {
   }
 }
 
-ProfileScreen.navigationOptions = {
+WebViewDemo.navigationOptions = {
   title: 'Profile',
 };
 
-export default ProfileScreen;
+export default WebViewDemo;
