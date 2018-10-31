@@ -1,7 +1,9 @@
+
 {
   "presets": ["react-native"],
-  "plugins": [["import", { "libraryName": "antd-mobile" }], [
-    "babel-plugin-root-import", [
+  "plugins": [
+    ["import", { "libraryName": "antd-mobile" }],
+    [ "babel-plugin-root-import", [
       {
       "rootPathPrefix": "~", 
       "rootPathSuffix": "src/utils"
@@ -12,8 +14,8 @@
       "rootPathPrefix": "#",
       "rootPathSuffix": "../../src/in/parent"
     }
-  ]
-  ]],
+  ]]
+],
   "env": {
     "development": {
       "plugins": [
