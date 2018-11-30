@@ -1,28 +1,26 @@
+
 {
   "presets": ["react-native"],
   "plugins": [
     ["import", { "libraryName": "antd-mobile" }],
-    [
-      "babel-plugin-root-import",
-      [
-        {
-          "rootPathPrefix": "~",
-          "rootPathSuffix": "src/utils"
-        },
-        {
-          "rootPathPrefix": "@",
-          "rootPathSuffix": "src/utils"
-        },
-        {
-          "rootPathPrefix": "#",
-          "rootPathSuffix": "../../src/in/parent"
-        }
-      ]
-    ]
-  ],
+    [ "babel-plugin-root-import", [
+      {
+      "rootPathPrefix": "~", 
+      "rootPathSuffix": "src/utils"
+    }, {
+      "rootPathPrefix": "@",
+      "rootPathSuffix": "src/utils"
+    }, {
+      "rootPathPrefix": "#",
+      "rootPathSuffix": "../../src/in/parent"
+    }
+  ]]
+],
   "env": {
     "development": {
-      "plugins": ["transform-react-jsx-source"]
+      "plugins": [
+        "transform-react-jsx-source"
+      ]
     }
   }
 }

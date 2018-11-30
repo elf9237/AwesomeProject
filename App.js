@@ -1,15 +1,20 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 
-import AppReducer from "./src/reducers";
-// import AppWithNavigationState from './src/navigators/AppNavigator';  //navigation入口
-import AppWithNavigationState from "./src/navigators/AppNavigatorTab"; //tabNavigation入口
+import AppReducer from './src/reducers';
+import AppWithNavigationState from './src/navigators/AppNavigator';  //navigation入口
+//import AppWithNavigationState from './src/navigators/AppNavigatorTab';  //tabNavigation入口
 //import AppWithNavigationState from './src/navigators/AppNavigatorDrawer';  //navigation入口
-import { middleware } from "./src/utils/redux";
+import { middleware } from './src/utils/redux';
 
-const store = createStore(AppReducer, applyMiddleware(middleware));
+
+const store = createStore(
+  AppReducer,
+  applyMiddleware(middleware),
+);
+
 
 export default class App extends React.Component {
   render() {
@@ -24,8 +29,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
