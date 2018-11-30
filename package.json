@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "babel-plugin-import": "^1.11.0",
+    "babel-plugin-root-import": "^6.1.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "jest": "^23.1.0",
     "jest-react-native": "^18.0.0",
